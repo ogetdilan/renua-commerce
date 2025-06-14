@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sepetim - Renua</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      padding: 20px;
+      background-color: #fefefe;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+    }
+
+    .sepet-icerik {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .urun {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .urun img {
+      width: 80px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .urun-bilgi {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .urun-bilgi h3 {
+      margin: 0 0 10px 0;
+    }
+
+    .adet-kontrol {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .adet-kontrol button {
+      padding: 5px 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #toplamTutar {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .sepet-butons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .sepet-butons button {
+      padding: 12px 20px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .urun {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .urun img {
+        width: 100%;
+      }
+
+      .urun-bilgi {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sepetim</h1>
+
+  <div class="sepet-icerik" id="sepet"></div>
+
+  <p id="toplamTutar">Toplam: 0 TL</p>
+
+  <div class="sepet-butons">
+    <button id="sepetiTemizleBtn">Sepeti Temizle</button>
+    <button id="odemeYapBtn">Ödemeyi Tamamla</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
